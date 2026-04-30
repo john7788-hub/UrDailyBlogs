@@ -1,0 +1,106 @@
+src/pages/write-for-us.jsx
+import React from "react";
+
+export default function WriteForUsPage() {
+  return (
+    <div className="min-h-screen bg-white text-gray-800">
+      {/* Header */}
+      <header className="bg-gray-900 text-white py-12 px-6 text-center">
+        <h1 className="text-4xl font-bold">Write for Us</h1>
+        <p className="mt-3 text-lg text-gray-300">
+          Submit Guest Posts to UrdailyBlogs
+        </p>
+      </header>
+
+      {/* Container */}
+      <main className="max-w-4xl mx-auto px-6 py-10">
+        {/* Intro */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-3">Become a Contributor</h2>
+          <p className="text-gray-700 leading-relaxed">
+            UrdailyBlogs welcomes guest contributors from around the world. If you are
+            passionate about writing and have expertise in Technology, SEO, Business,
+            Health, or Digital Marketing, you can publish your articles on our platform.
+            We only accept high-quality, original, and SEO-optimized content.
+          </p>
+        </section>
+
+        {/* Guidelines */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-3">Guest Post Guidelines</h2>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Articles must be 800–1500 words</li>
+            <li>Content must be 100% original (no plagiarism)</li>
+            <li>Proper headings (H1, H2, H3) required</li>
+            <li>SEO-optimized content preferred</li>
+            <li>Readable and well-structured writing</li>
+            <li>Relevant images are optional but recommended</li>
+          </ul>
+        </section>
+
+        {/* Topics */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-3">Accepted Topics</h2>
+          <div className="flex flex-wrap gap-3">
+            {["Technology", "SEO & Marketing", "Business", "Health", "Lifestyle"].map(
+              (item) => (
+                <span
+                  key={item}
+                  className="bg-gray-200 px-4 py-2 rounded-full text-sm"
+                >
+                  {item}
+                </span>
+              )
+            )}
+          </div>
+        </section>
+
+        {/* Submission */}
+        <section className="mb-10 bg-gray-50 p-6 rounded-xl border">
+          <h2 className="text-2xl font-semibold mb-3">How to Submit</h2>
+          <p className="text-gray-700 mb-4">
+            Send your article to the email below with required details.
+          </p>
+
+          <div className="bg-white p-4 rounded border">
+            <p className="font-semibold">Email:</p>
+            <p className="text-blue-600">johnwick28916@gmail.com</p>
+
+            <p className="mt-4 font-semibold">Subject Line:</p>
+            <p>Guest Post Submission - [Your Topic]</p>
+
+            <p className="mt-4 font-semibold">Include:</p>
+            <ul className="list-disc pl-6 text-gray-700">
+              <li>Full article (Word or text format)</li>
+              <li>Author name</li>
+              <li>Short bio (2–3 lines)</li>
+              <li>Optional website/social link</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Response */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-3">Response Time</h2>
+          <p className="text-gray-700">
+            We usually review submissions within 24–48 hours. Approved articles will
+            be published on UrdailyBlogs with proper author credit.
+          </p>
+        </section>
+
+        {/* Disclaimer */}
+        <section className="mb-10 text-sm text-gray-600">
+          <p>
+            We reserve the right to edit or reject submissions that do not meet our
+            quality standards. Only valuable and original content will be published.
+          </p>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white text-center py-6">
+        <p>© {new Date().getFullYear()} UrdailyBlogs. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
