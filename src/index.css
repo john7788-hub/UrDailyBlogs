@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-primary: #1A1A1A;
+  --color-brand-accent: #2D5A27;
+  --color-brand-soft: #FDFDFB;
+  --color-brand-border: rgba(26, 26, 26, 0.1);
+}
+
+@layer base {
+  body {
+    @apply font-sans text-brand-primary bg-brand-soft antialiased min-h-screen;
+  }
+}
+
+@layer components {
+  .header-border {
+    @apply border-b border-brand-border;
+  }
+  
+  .accent-bg {
+    @apply bg-brand-accent text-white;
+  }
+  
+  .accent-text {
+    @apply text-brand-accent;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-[4px] border border-brand-accent/10;
+  }
+}
+
+.markdown-body {
+  @apply text-lg leading-relaxed text-brand-primary;
+}
+
+.markdown-body h2 {
+  @apply text-3xl font-serif font-bold mt-12 mb-6;
+}
+
+.markdown-body h3 {
+  @apply text-2xl font-serif font-semibold mt-8 mb-4;
+}
+
+.markdown-body p {
+  @apply mb-6 font-light;
+}
+
+.markdown-body ul {
+  @apply list-disc pl-6 mb-6 space-y-2 font-light;
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-brand-accent pl-6 py-2 italic bg-brand-accent/5 my-8;
+}
